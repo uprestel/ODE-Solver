@@ -28,9 +28,9 @@ Libraries used:
 Short explanation
 =====
 
-<math>
-	H(s) = ∫<sub>0</sub><sup>∞</sup> e<sup>-st</sup> h(t) dt
-</math>
+In the method of multiple shooting we divide the interval <math> [a,b] </math> into m+1 subintervals, namely <math>a = t_0 < t_1 < ... < t_m = b </math>
+
+
 
 Examples
 =====
@@ -43,7 +43,7 @@ for age in range(0, 122):
 ```
 Ideas for improvement
 =====
-* Parallelization of the calculation of the jacobian matrix ∇F(s(k))
+* Parallelization of the calculation of the jacobian matrix <math> ∇F(s(k)) </math>
 * Rewriting the code in Cython
 * Using the integrators provided by scipy
 * Improving the Newton-methods
