@@ -67,7 +67,7 @@ if __name__ == "__main__":
 	bv_right = np.array([3, 0])             # values at t=1
 	interpolated_bv = util.getInterpolatedVectors(bv_right, bv_left, m + 1)
                                             # intermediate values
-	Ba = np.matrix([[1, 0], [0, 0]])        # jacobian of r w.r.t a[0]
+	Ba = np.matrix([[1, 0], [0, 0]])        # jacobian of r w.r.t a
 	Bb = np.matrix([[0, 0], [1, 0]])        # analogous with b
 
 	integrator = rk.DormandPrince(h=.01)    # we choose Dormand-Prince
