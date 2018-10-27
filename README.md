@@ -11,7 +11,7 @@ Table of contents
 <!--ts-->
    * [Prerequisites](#prerequisites)
    * [Short explanation](#short-explanation)
-   * [Example](#example)
+   * [Simple example](#simple-example)
    * [Ideas for improvement](#ideas-for-improvement)
 <!--te-->
 
@@ -28,7 +28,7 @@ Short explanation
 **Coming soon.** In the mean time [this](https://en.wikipedia.org/wiki/Direct_multiple_shooting_method) will be sufficient.
 
 
-Example
+Simple example
 =====
 Consider the simple problem ![](./doc/bvp_poly.svg) which has the solution 
 ![](./doc/sol_poly.svg)
