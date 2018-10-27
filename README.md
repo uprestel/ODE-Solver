@@ -73,7 +73,7 @@ if __name__ == "__main__":
 	integrator = rk.DormandPrince(h=.01)    # we choose Dormand-Prince
 
 	newtonSolver = newtonssc.StdNewton(Ba=Ba, Bb=Bb, t=t, r=r,
-	    integrator=integrator, maxIter=0)
+	    integrator=integrator)
                                             # we use a standard newton-solver
                                             # now we shoot
 
