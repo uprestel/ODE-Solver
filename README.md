@@ -27,19 +27,17 @@ Libraries used:
 
 Short explanation
 =====
-
-In the method of multiple shooting we divide the interval <math> [a,b] </math> into m+1 subintervals, namely <math>a = t_0 < t_1 < ... < t_m = b </math>
-
+Coming soon. In the mean time [this][https://en.wikipedia.org/wiki/Direct_multiple_shooting_method] will be sufficient.
 
 
 Examples
 =====
+Consider the simple problem ![alt text](./doc/bvp_poly.svg)
+
+
 
 ```python
-f = open("daten.txt", "r")
-data = f.read().split("\n")
-for age in range(0, 122):
-	print data[age*4+2], data[age*4+3]
+
 ```
 Ideas for improvement
 =====
@@ -47,3 +45,4 @@ Ideas for improvement
 * Rewriting the code in Cython
 * Using the integrators provided by scipy
 * Improving the Newton-methods
+
