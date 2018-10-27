@@ -66,23 +66,26 @@ if __name__ == "__main__":
 	bv_left = np.array([1, 0])              # values at t=0
 	bv_right = np.array([3, 0])             # values at t=1
 	interpolated_bv = util.getInterpolatedVectors(bv_right, bv_left, m + 1)
-											#intermediate values
-	Ba = np.matrix([[1, 0], [0, 0]])		
-	Bb = np.matrix([[0, 0], [1, 0]])
+                                            # intermediate values
+	Ba = np.matrix([[1, 0], [0, 0]])        # jacobian of r w.r.t a[0]
+	Bb = np.matrix([[0, 0], [1, 0]])        # analogous with b
 
-	integrator = rk.DormandPrince(h=.01)
+	integrator = rk.DormandPrince(h=.01)    # we choose Dormand-Prince
 
 	newtonSolver = newtonssc.StdNewton(Ba=Ba, Bb=Bb, t=t, r=r,
 									   integrator=integrator, maxIter=0)
+                                            # we use a standard newton-solver
+                                            # now we shoot
 
 	shooter = msh.MultipleShootingIntegrator(t=t, m=m, dim=2,
 											 boundary_values=interpolated_bv,
 											 integrator=integrator,
 											 newtonSolver=newtonSolver)
 	shooter.shoot(f=f, maxiter=maxiter, silent=False)
-
-
 ```
+The solution can then be plotted using something like matplotlib.
+For different and more sophisticated examples see the examples folder.
+
 Ideas for improvement
 =====
 * Parallelization of the calculation of the jacobian matrix <math> ∇F(s(k)) </math>
