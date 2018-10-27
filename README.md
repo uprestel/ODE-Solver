@@ -73,14 +73,14 @@ if __name__ == "__main__":
 	integrator = rk.DormandPrince(h=.01)    # we choose Dormand-Prince
 
 	newtonSolver = newtonssc.StdNewton(Ba=Ba, Bb=Bb, t=t, r=r,
-									   integrator=integrator, maxIter=0)
+	    integrator=integrator, maxIter=0)
                                             # we use a standard newton-solver
                                             # now we shoot
 
 	shooter = msh.MultipleShootingIntegrator(t=t, m=m, dim=2,
-											 boundary_values=interpolated_bv,
-											 integrator=integrator,
-											 newtonSolver=newtonSolver)
+        boundary_values=interpolated_bv,
+        integrator=integrator,
+        newtonSolver=newtonSolver)
 	shooter.shoot(f=f, maxiter=maxiter, silent=False)
 ```
 The solution can then be plotted using something like matplotlib.
