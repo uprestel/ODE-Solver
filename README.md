@@ -42,29 +42,29 @@ By simple substitution we can transform this problem to the form
 Now we can turn this into code.
 
 ```python
-import numpy as np  						# used to define vectors
-import util									# used to generate initial values at each interval
-import multish as msh  						# implementation of the multiple shooting algorithm
-import rukutta as rk 						# implementation of explicit Runge-Kutta methods
-import newtonssc							# implements different newton methods
+import numpy as np                          # used to define vectors
+import util                                 # used to generate initial values at each interval
+import multish as msh                       # implementation of the multiple shooting algorithm
+import rukutta as rk                        # implementation of explicit Runge-Kutta methods
+import newtonssc                            # implements different newton methods
 
 
-def f(t, y):								# our transformed problem  
+def f(t, y):                                # our transformed problem
 	return np.array([y[1], t ** 2 + 1])
 
 
-def r(a, b):								# this function describes the boundary-conditions
+def r(a, b):                                # this function describes the boundary-conditions
 	return np.array([a[0] - 1, b[0] - 3])
 
 
 
 if __name__ == "__main__":
-	m = 10									# we divide the interval [0,1] into 10 intervals
-	maxiter = 10							# we want at most 10 shooting iterations
-	t = np.linspace(0., 1., m + 1)			# the intervals
+	m = 10                                  # we divide the interval [0,1] into 10 intervals
+	maxiter = 10                            # we want at most 10 shooting iterations
+	t = np.linspace(0., 1., m + 1)          # the intervals
 
-	bv_left = np.array([1, 0])				# values at t=0
-	bv_right = np.array([3, 0])				# values at t=1
+	bv_left = np.array([1, 0])              # values at t=0
+	bv_right = np.array([3, 0])             # values at t=1
 	interpolated_bv = util.getInterpolatedVectors(bv_right, bv_left, m + 1)
 											#intermediate values
 	Ba = np.matrix([[1, 0], [0, 0]])		
