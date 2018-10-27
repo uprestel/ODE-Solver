@@ -11,9 +11,7 @@ Table of contents
 <!--ts-->
    * [Prerequisites](#prerequisites)
    * [Short explanation](#short-explanation)
-   * [Examples](#examples)
-      * [Simple ODE](#stdin)
-      * [Lotka-Volterra](#Lotka-Volterra)
+   * [Example](#example)
    * [Ideas for improvement](#ideas-for-improvement)
 <!--te-->
 
@@ -27,10 +25,10 @@ Libraries used:
 
 Short explanation
 =====
-Coming soon. In the mean time [this](https://en.wikipedia.org/wiki/Direct_multiple_shooting_method) will be sufficient.
+**Coming soon.** In the mean time [this](https://en.wikipedia.org/wiki/Direct_multiple_shooting_method) will be sufficient.
 
 
-Examples
+Example
 =====
 Consider the simple problem ![](./doc/bvp_poly.svg) which has the solution 
 ![](./doc/sol_poly.svg)
@@ -40,6 +38,8 @@ By simple substitution we can transform this problem to the form
 
 ![](./doc/transformed_poly.svg)
 
+
+Now we can turn this into code
 
 ```python
 
