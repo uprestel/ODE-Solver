@@ -34,7 +34,10 @@ Examples
 =====
 Consider the simple problem ![](./doc/bvp_poly.svg) which has the solution 
 ![](./doc/sol_poly.svg)
+
 By simple substitution we can transform this problem to the form 
+
+
 ![](./doc/transformed_poly.svg)
 
 
