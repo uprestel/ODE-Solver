@@ -27,13 +27,15 @@ Libraries used:
 
 Short explanation
 =====
-Coming soon. In the mean time [this][https://en.wikipedia.org/wiki/Direct_multiple_shooting_method] will be sufficient.
+Coming soon. In the mean time [this](https://en.wikipedia.org/wiki/Direct_multiple_shooting_method) will be sufficient.
 
 
 Examples
 =====
-Consider the simple problem ![alt text](./doc/bvp_poly.svg) which has the solution ![alt text](./doc/sol_poly.svg)
-By simple substitution we can transform this problem to the form ![alt text](./doc/transformed_poly.svg)
+Consider the simple problem ![](./doc/bvp_poly.svg) which has the solution 
+![](./doc/sol_poly.svg)
+By simple substitution we can transform this problem to the form 
+![](./doc/transformed_poly.svg)
 
 
 ```python
