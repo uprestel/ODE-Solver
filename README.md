@@ -1,6 +1,6 @@
 # ODE-Solver
 
-ODE-solver using the method of multiple shooting
+Ordinary differential equation solver using the method of multiple shooting
 
 ---
 
